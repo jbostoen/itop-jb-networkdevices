@@ -108,6 +108,7 @@ SELECT * FROM networkdevice WHERE finalclass = 'NetworkDevice';
 
 Icons: Flaticon License. Free for personal and commercial purpose with attribution. 
 * Firewall: https://www.flaticon.com/free-icon/firewall_139735 - Attribution: Smashicons
+* MiscNetworkDevice: https://www.flaticon.com/free-icon/device_2905997 - Attribution: phatplus
 * NetworkSwitch: https://www.flaticon.com/free-icon/switch_1088747 - Attribution: phatplus
 * Router: https://www.flaticon.com/free-icon/router_3474407 - Attribution: xnimrodx
 * WirelessAccessPoint: https://www.flaticon.com/free-icon/router_3029974 - Attribution: xnimrodx
