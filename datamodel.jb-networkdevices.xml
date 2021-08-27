@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.6">
+	<!-- 
+ * @copyright   Copyright (C) 2021 Jeffrey Bostoen
+ * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
+-->
+	<classes>
+		<class id="NetworkDevice">
+			<properties>
+				<abstract _delta="redefine">true</abstract>
+			</properties>
+		</class>
+		<class id="Firewall" _delta="define">
+			<parent>NetworkDevice</parent>
+			<properties>
+				<category>bizmodel,searchable</category>
+				<abstract>false</abstract>
+				<key_type>autoincrement</key_type>
+				<db_table>firewall</db_table>
+				<db_key_field>id</db_key_field>
+				<db_final_class_field/>
+				<naming>
+					<attributes>
+						<attribute id="name"/>
+					</attributes>
+				</naming>
+				<display_template/>
+				<icon>images/firewall.png</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="name"/>
+						<attribute id="org_id"/>
+						<attribute id="organization_name"/>
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields/>
+			<presentation/>
+			<methods/>
+			<relations/>
+		</class>
+		<class id="MiscNetworkDevice" _delta="define">
+			<parent>NetworkDevice</parent>
+			<properties>
+				<category>bizmodel,searchable</category>
+				<abstract>false</abstract>
+				<key_type>autoincrement</key_type>
+				<db_table>miscnetworkdevice</db_table>
+				<db_key_field>id</db_key_field>
+				<db_final_class_field/>
+				<naming>
+					<attributes>
+						<attribute id="name"/>
+					</attributes>
+				</naming>
+				<display_template/>
+				<icon>images/miscnetworkdevice.png</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="name"/>
+						<attribute id="org_id"/>
+						<attribute id="organization_name"/>
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields/>
+			<presentation/>
+			<methods/>
+			<relations/>
+		</class>
+		<!-- Note: 'Switch' was a reserved word in PHP -->
+		<class id="NetworkSwitch" _delta="define">
+			<parent>NetworkDevice</parent>
+			<properties>
+				<category>bizmodel,searchable</category>
+				<abstract>false</abstract>
+				<key_type>autoincrement</key_type>
+				<db_table>networkswitch</db_table>
+				<db_key_field>id</db_key_field>
+				<db_final_class_field/>
+				<naming>
+					<attributes>
+						<attribute id="name"/>
+					</attributes>
+				</naming>
+				<display_template/>
+				<icon>images/networkswitch.png</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="name"/>
+						<attribute id="org_id"/>
+						<attribute id="organization_name"/>
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields/>
+			<presentation/>
+			<methods/>
+			<relations/>
+		</class>
+		<class id="Router" _delta="define">
+			<parent>NetworkDevice</parent>
+			<properties>
+				<category>bizmodel,searchable</category>
+				<abstract>false</abstract>
+				<key_type>autoincrement</key_type>
+				<db_table>router</db_table>
+				<db_key_field>id</db_key_field>
+				<db_final_class_field/>
+				<naming>
+					<attributes>
+						<attribute id="name"/>
+					</attributes>
+				</naming>
+				<display_template/>
+				<icon>images/router.png</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="name"/>
+						<attribute id="org_id"/>
+						<attribute id="organization_name"/>
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields/>
+			<presentation/>
+			<methods/>
+			<relations/>
+		</class>
+		<class id="WirelessAccessPoint" _delta="define">
+			<parent>NetworkDevice</parent>
+			<properties>
+				<category>bizmodel,searchable</category>
+				<abstract>false</abstract>
+				<key_type>autoincrement</key_type>
+				<db_table>wirelessaccesspoint</db_table>
+				<db_key_field>id</db_key_field>
+				<db_final_class_field/>
+				<naming>
+					<attributes>
+						<attribute id="name"/>
+					</attributes>
+				</naming>
+				<display_template/>
+				<icon>images/wirelessaccesspoint.png</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="name"/>
+						<attribute id="org_id"/>
+						<attribute id="organization_name"/>
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields/>
+			<presentation/>
+			<methods/>
+			<relations/>
+		</class>
+	</classes>
+	<menus>
+		<menu id="ConfigManagementOverview" xsi:type="DashboardMenuNode">
+			<definition>
+				<cells>
+					<cell id="0">
+						<dashlets>
+							<!-- id="3" = NetworkDevice -->
+							<dashlet id="3" xsi:type="DashletBadge" _delta="delete"/>
+							<dashlet id="3_firewall" xsi:type="DashletBadge" _delta="define">
+								<rank>4.3</rank>
+								<class>Firewall</class>
+							</dashlet>
+							<dashlet id="3_miscnetworkdevice" xsi:type="DashletBadge" _delta="define">
+								<rank>4.5</rank>
+								<class>MiscNetworkDevice</class>
+							</dashlet>
+							<dashlet id="3_networkswitch" xsi:type="DashletBadge" _delta="define">
+								<rank>4.1</rank>
+								<class>NetworkSwitch</class>
+							</dashlet>
+							<dashlet id="3_router" xsi:type="DashletBadge" _delta="define">
+								<rank>4.4</rank>
+								<class>Router</class>
+							</dashlet>
+							<dashlet id="3_wirelessaccesspoint" xsi:type="DashletBadge" _delta="define">
+								<rank>4.2</rank>
+								<class>WirelessAccessPoint</class>
+							</dashlet>
+						</dashlets>
+					</cell>
+				</cells>
+			</definition>
+		</menu>
+	</menus>
+</itop_design>
+
+

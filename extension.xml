@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension format="1.0">
+	<extension_code><![CDATA[jb-networkdevices]]></extension_code>
+	<company><![CDATA[]]></company>
+	<author><![CDATA[Jeffrey Bostoen]]></author>
+	<label><![CDATA[Datamodel: Network devices - subclasses]]></label>
+	<description><![CDATA[It's more interesting for impact analysis to have separate classes of network devices, rather than to depend on a typology to define the device. This extension introduces Firewall, Misc.Network Device, Switch, Wireless Access Point.]]></description>
+	<version><![CDATA[2.6.210826]]></version>
+	<release_date><![CDATA[2021-08-26]]></release_date>
+	<version_description><![CDATA[]]></version_description>
+	<itop_version_min><![CDATA[2.6.0]]></itop_version_min>
+	<status>stable</status>
+	<mandatory>false</mandatory>
+	<more_info_url><![CDATA[https://jbostoen.github.io/itop-extensions-documentation/]]></more_info_url>
+</extension>
+
+
