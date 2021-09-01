@@ -4,7 +4,21 @@
  * @copyright   Copyright (C) 2021 Jeffrey Bostoen
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
 -->
-	<classes>
+	<classes>	
+		<class id="Model"> 
+			<fields>
+				<field id="type" xsi:type="AttributeEnum">
+					<values>
+						<value id="Firewall" _delta="define">Firewall</value> 
+						<value id="NetworkSwitch" _delta="define">NetworkSwitch</value> 
+						<value id="MiscNetworkDevice" _delta="define">MiscNetworkDevice</value> 
+						<value id="Router" _delta="define">Router</value> 
+						<value id="WirelessAccessPoint" _delta="define">WirelessAccessPoint</value> 
+					</values>
+				</field>
+			</fields>
+		</class>
+
 		<class id="NetworkDevice">
 			<properties>
 				<abstract _delta="redefine">true</abstract>
