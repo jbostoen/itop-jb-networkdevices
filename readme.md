@@ -104,6 +104,9 @@ SELECT * FROM networkdevice WHERE finalclass = 'NetworkDevice';
 
 
 
+You may also need to adjust the model typology!
+
+
 ## Credits
 
 Icons: Flaticon License. Free for personal and commercial purpose with attribution. 
